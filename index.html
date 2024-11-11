@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Love Animation</title>
+<style>
+    body {
+        background-color: #ffccd5;
+        overflow: hidden;
+        margin: 0;
+        font-family: 'Arial', sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .love-message {
+        position: absolute;
+        font-size: 2rem;
+        color: #ff0048;
+        animation: fly 8s linear infinite;
+    }
+
+    .heart {
+        position: absolute;
+        font-size: 2rem;
+        color: #ff0048;
+        animation: fly 8s linear infinite;
+    }
+
+    @keyframes fly {
+        0% {
+            transform: translate(-50px, 100vh) rotate(0deg);
+            opacity: 0;
+        }
+        10% {
+            opacity: 1;
+        }
+        100% {
+            transform: translate(calc(100vw + 50px), -100px) rotate(360deg);
+            opacity: 0;
+        }
+    }
+</style>
+</head>
+<body>
+
+<!-- Love Messages -->
+<div class="love-message" id="message1">I ❤️ You</div>
+<div class="love-message" id="message2">I Love You</div>
+
+<!-- Heart Symbols -->
+<div class="heart" id="heart1">❤️</div>
+<div class="heart" id="heart2">💖</div>
+<div class="heart" id="heart3">💕</div>
+<div class="love-message" id="message1">I ❤️ You</div>
+<div class="love-message" id="message2">I Love You</div>
+
+<!-- Heart Symbols -->
+<div class="heart" id="heart1">❤️</div>
+<div class="heart" id="heart2">💖</div>
+<div class="heart" id="heart3">💕</div>
+<div class="love-message" id="message1">I ❤️ You</div>
+<div class="love-message" id="message2">I Love You</div>
+
+<!-- Heart Symbols -->
+<div class="heart" id="heart1">❤️</div>
+<div class="heart" id="heart2">💖</div>
+<div class="heart" id="heart3">💕</div><div class="love-message" id="message1">I ❤️ You</div>
+<div class="love-message" id="message2">I Love You</div>
+
+<!-- Heart Symbols -->
+<div class="heart" id="heart1">❤️</div>
+<div class="heart" id="heart2">💖</div>
+<div class="heart" id="heart3">💕</div><div class="love-message" id="message1">I ❤️ You</div>
+<div class="love-message" id="message2">I Love You</div>
+
+<!-- Heart Symbols -->
+<div class="heart" id="heart1">❤️</div>
+<div class="heart" id="heart2">💖</div>
+<div class="heart" id="heart3">💕</div><div class="love-message" id="message1">I ❤️ You</div>
+<div class="love-message" id="message2">I Love You</div>
+
+<!-- Heart Symbols -->
+<div class="heart" id="heart1">❤️</div>
+<div class="heart" id="heart2">💖</div>
+<div class="heart" id="heart3">💕</div><div class="love-message" id="message1">I ❤️ You</div>
+<div class="love-message" id="message2">I Love You</div>
+
+<!-- Heart Symbols -->
+<div class="heart" id="heart1">❤️</div>
+<div class="heart" id="heart2">💖</div>
+<div class="heart" id="heart3">💕</div><div class="love-message" id="message1">I ❤️ You</div>
+<div class="love-message" id="message2">I Love You</div>
+
+<!-- Heart Symbols -->
+<div class="heart" id="heart1">❤️</div>
+<div class="heart" id="heart2">💖</div>
+<div class="heart" id="heart3">💕</div><div class="love-message" id="message1">I ❤️ You</div>
+<div class="love-message" id="message2">I Love You</div>
+
+<!-- Heart Symbols -->
+<div class="heart" id="heart1">❤️</div>
+<div class="heart" id="heart2">💖</div>
+<div class="heart" id="heart3">💕</div><div class="love-message" id="message1">I ❤️ You</div>
+<div class="love-message" id="message2">I Love You</div>
+
+<!-- Heart Symbols -->
+<div class="heart" id="heart1">❤️</div>
+<div class="heart" id="heart2">💖</div>
+<div class="heart" id="heart3">💕</div>
+
+<script>
+    // Helper function to set random positions and animation delays
+    function randomizeElement(element) {
+        const randomX = Math.random() * window.innerWidth;
+        const randomDelay = Math.random() * 5;
+        element.style.left = `${randomX}px`;
+        element.style.animationDelay = `${randomDelay}s`;
+    }
+
+    // Get all animated elements
+    const messages = document.querySelectorAll('.love-message');
+    const hearts = document.querySelectorAll('.heart');
+
+    // Apply random positions and delays
+    messages.forEach(randomizeElement);
+    hearts.forEach(randomizeElement);
+
+    // Repeat the randomization periodically
+    setInterval(() => {
+        messages.forEach(randomizeElement);
+        hearts.forEach(randomizeElement);
+    }, 8000);
+</script>
+
+</body>
+</html>
